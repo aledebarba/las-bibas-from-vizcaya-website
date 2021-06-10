@@ -1,0 +1,7 @@
+{
+    "endPoint" : {
+        "siteOptions" : "https://lasbibas.uxdir.com/wpdb/wp-json/acf/v3/options/options/",
+        "homePageContent" : "https://lasbibas.uxdir.com/wpdb/wp-json/wp/v2/pages?slug=%22home-page%22/",
+        "posts": "https://lasbibas.uxdir.com/wpdb/wp-json/wp/v2/posts"
+    }
+}

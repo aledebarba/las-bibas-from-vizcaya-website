@@ -1,0 +1,104 @@
+$menuHeight: 90vh;
+$menuWidth: 50vw;
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: $menuWidth;
+    height: $menuHeight;
+    transition: all 0.5s ease;
+
+    .background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #AA662B;
+    }
+
+    .main-image {
+        position: absolute;
+        top: 0;
+        left: -35%;
+        background-image: url('../../static/menu-image.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: $menuHeight;
+    }
+
+    .menu__options {
+        position: absolute;
+        right: 64px;
+        top: 160px;
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        a {
+            color: white;
+            font-weight: bold;
+
+            &:hover {
+                
+            }
+        }
+    }
+}
+
+.toggler {
+    button {
+        cursor: pointer;
+        position: fixed;
+        right: 32px;
+        top: 32px;
+        width: 128px;
+        height: 64px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 3px solid white;
+        border-radius: 99px;
+        box-shadow: 0 0 10px 0px white, 
+            inset 0 0 10px 0px white;
+    }
+}
+
+.button_open {
+    background-color: #000000cc;
+    transition: all 500ms linear;
+}
+.button_close {
+    background-color: #00000000;
+    transition: all 500ms linear;
+}
+
+.visible {
+    right: 0px;
+}
+
+.hidden {
+    right: (1.35 * $menuWidth) * -1;
+}
+
+.bg_overlay_visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.8;
+    transition: all 300ms linear;
+}
+
+.bg_overlay_hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    transition: all 300ms linear;
+}
