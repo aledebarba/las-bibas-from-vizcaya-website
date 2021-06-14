@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
+import lbfvImage from '../../static/menu-pose-isolation.png';
+import lbfvMenuBg from '../../static/menu-bg.svg';
 
 const HambugerMenu = () => {
 
@@ -12,8 +14,10 @@ const HambugerMenu = () => {
     <StyledMenu>
       <div className={backgroundOverlay} />
       <div className={visibility}>
-        <div className="background" />
-        <div className="main-image" />
+        <div className="background">
+            <div className="menu-bg" />
+            <div className="main-image" />
+        </div>
         <div className="menu__options">
           <a href='#about'>About</a>
           <a href='#contact'>Contact</a>
@@ -37,35 +41,48 @@ const HambugerMenu = () => {
 export default HambugerMenu
 
 const StyledMenu = styled.div`
-$menuHeight: 90vh;
-$menuWidth: 50vw;
-
+--menuHeight: 90vh;
+--menuWidth: 50vw; 
 .menu {
     position: fixed;
     top: 0;
-    width: $menuWidth;
-    height: $menuHeight;
+    width: var(--menuWidth);
+    height: var(--menuHeight);
     transition: all 0.5s ease;
 
     .background {
         position: absolute;
         top: 0;
         right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #AA662B;
+        width: 50vw;
+        height: 100vh;
+        border: 3px solid red;
     }
 
     .main-image {
         position: absolute;
         top: 0;
-        left: -35%;
-        background-image: url(${require('../../static/menu-image.png')});
+        left: -35px;
+        background-image: url(${lbfvImage});
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
-        height: $menuHeight;
+        height: 90vh;
+        border: 2px solid yellow;
     }
+
+    .menu-bg {
+        position: absolute;
+        top: 32px;
+        left: 0px;
+        background-image: url(${lbfvMenuBg});
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 80vh;
+        border: 2px solid green;
+    }
+
 
     .menu__options {
         position: absolute;
@@ -117,8 +134,7 @@ $menuWidth: 50vw;
 }
 
 .hidden {
-    right: (1.35 * $menuWidth) * -1;
-}
+    right: 100vh; }
 
 .bg_overlay_visible {
     position: fixed;
