@@ -1,6 +1,15 @@
 @use "typography.scss";
 @use "theme-colors.scss";
+* {
+    box-sizing: border-box;
+}
 
 body {
-    min-height: 500vh;
+    margin: 0;
+    padding: 0;
+    height: 500vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;    
+    scroll-behavior: smooth;
 }

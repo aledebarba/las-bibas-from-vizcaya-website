@@ -3,5 +3,10 @@
         "siteOptions" : "https://lasbibas.uxdir.com/wpdb/wp-json/acf/v3/options/options/",
         "homePageContent" : "https://lasbibas.uxdir.com/wpdb/wp-json/wp/v2/pages?slug=%22home-page%22/",
         "posts": "https://lasbibas.uxdir.com/wpdb/wp-json/wp/v2/posts"
+    },
+    "spotify" : {
+        "clientId" : "3cf319c33d2f45eab5fa70a289e49c3a" ,
+        "clientSecret" : "8a769c36cfd54d76b5efc55ac2d53a7b",
+        "artistId" : "7GhwmwtgLfAAsjIHMEqhDg" 
     }
 }

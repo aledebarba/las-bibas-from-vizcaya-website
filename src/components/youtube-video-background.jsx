@@ -9,9 +9,9 @@ import styled from 'styled-components';
 */
 const YoutubeVideoBackground = ({ title, videoId, scrollAnchor }) => { return (
     <StyledVideoBackground>
-        <div clasName="video-background">
+        <div className="video-background">
             <div className="video-foreground">
-                <iframe src={"https://youtube.com/embed/" + videoId + "?mute=1&controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=yNPcipztRAY"} frameborder="0" allowfullscreen></iframe>
+                <iframe src={"https://youtube.com/embed/" + videoId + "?mute=1&controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=yNPcipztRAY"} frameBorder="0" allowFullScreen title="youtube video background"></iframe>
             </div>
             <div className='video-overlay'></div>
             <div id='vidtop-content'>
@@ -26,23 +26,32 @@ const YoutubeVideoBackground = ({ title, videoId, scrollAnchor }) => { return (
 export default YoutubeVideoBackground
 
 const StyledVideoBackground = styled.div`
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
     .video-foreground,
     .video-background iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
     }
     .video-overlay {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.8;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        background-color: black;
+        opacity: 0.6;
     }
 
     #vidtop-content {
@@ -64,6 +73,7 @@ const StyledVideoBackground = styled.div`
     line-height: 0.8;
     margin-top: 0;
     }
+
     .vid-info a {
     display: block;
     color: #fff;
